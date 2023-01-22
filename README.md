@@ -1,7 +1,7 @@
 # spring-kotlin-backend
-Backend server with Spring and kotlin
+Backend server with Spring and Kotlin
 
-## A simple backend server with Spring Boot, Kotlin and PostegreSQL.
+## A simple backend server with Spring Boot, Kotlin and PostgreSQL.
 This is still very much a work in progress. The goal is to learn Spring and Kotlin development for backend. 
 
 Main objective is to have a basic CRUD functionality working witk PostgreSQL database.
