@@ -39,4 +39,4 @@ out/
 ### Environment ###
 .env
 .env.*
-application.properties
+*.properties
