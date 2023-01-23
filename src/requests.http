@@ -26,3 +26,58 @@ Content-Type: application/json
 
 ### Get all the messages
 GET http://localhost:8080/
+
+### Get the photos
+GET http://localhost:8080/api/photos
+
+### Post one photo
+POST http://localhost:8080/api/photos
+Content-Type: application/json
+
+{
+  "url": "https://img.ilcdn.fi/Is0zmu8Tj0Mf5j-3L9-6HvGZsiE=/full-fit-in/612x0/img-s3.ilcdn.fi/9e4131bc225129dc25be6e78bb60f8b357244bb351ac7a74741b629cedf92821.jpg",
+  "photoCaption": "This is a photo of a cat"
+}
+
+### Post many heroes
+POST http://localhost:8080/api/heroes/many
+Content-Type: application/json
+
+[
+  {
+    "name": "Lightning"
+  },
+  {
+    "name": "Dr. Nice"
+  },
+  {
+    "name": "Bombasto"
+  },
+  {
+    "name": "Celeritas"
+  },
+  {
+    "name": "Magneta"
+  },
+  {
+    "name": "RubberMan"
+  },
+  {
+    "name": "Dynama"
+  },
+  {
+    "name": "Dr. IQ"
+  },
+  {
+    "name": "Magma"
+  },
+  {
+    "name": "Tornado"
+  }
+]
+
+### Get one photo
+GET http://localhost:8080/api/photos/5
+
+### Get message with parameter
+GET http://localhost:8080/hello2?name=Pena
