@@ -14,6 +14,11 @@ class HeroController(val service: HeroService) {
     @GetMapping("/{id}")
     fun getHero(@PathVariable id: Int) = service.getById(id)
 
+    @GetMapping("/")
+    // Get a hero by request query string variable name
+    fun getHeroByName(@RequestParam name: String) = service.getAll().filter { it.name.contains(name, true) }
+    //"Hello, $name!"
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun saveHero(@RequestBody hero: Hero): Hero = service.create(hero)

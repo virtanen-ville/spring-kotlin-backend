@@ -81,3 +81,6 @@ GET http://localhost:8080/api/photos/5
 
 ### Get message with parameter
 GET http://localhost:8080/hello2?name=Pena
+
+### Get message with parameter
+GET http://localhost:8080/api/heroes/?name=bo
