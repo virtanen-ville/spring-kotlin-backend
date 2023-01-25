@@ -1,12 +1,12 @@
-package dev.virtanen.springkotlin.photo
+package dev.virtanen.springkotlin.game
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @CrossOrigin(origins = arrayOf("http://localhost:4200"), maxAge = 3600)
-@RequestMapping("api/photos")
-class PhotoController(val service: PhotoService) {
+@RequestMapping("api/games")
+class GameController(val service: GameService) {
 
     @GetMapping
     fun getAllPhotos() = service.getAll()
@@ -16,7 +16,7 @@ class PhotoController(val service: PhotoService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun savePhoto(@RequestBody photo: Photo): Photo = service.create(photo)
+    fun savePhoto(@RequestBody game: Game): Game = service.create(game)
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -24,6 +24,6 @@ class PhotoController(val service: PhotoService) {
 
     @PutMapping("/{id}")
     fun updatePhoto(
-        @PathVariable id: Int, @RequestBody photo: Photo
-    ) = service.update(id, photo)
+        @PathVariable id: Int, @RequestBody game: Game
+    ) = service.update(id, game)
 }
